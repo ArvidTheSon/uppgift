@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinesisk Nakenhund Världens Databas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="paper-container">
+        <!-- Top Bar with Links, Flags, and Dark Mode Toggle -->
+        <div class="top-bar">
+            <div class="left-links">
+                <a href="#">Om</a> | 
+                <a href="#">Hjälp</a> | 
+                <a href="#">Logga in</a>
+            </div>
+            <div class="flags">
+                <img src="./images/norway.png" alt="Norges Flagga" id="norwegian">
+                <img src="./images/sweden.png" alt="Sveriges Flagga" id="swedish">
+                <img src="./images/united-kingdom.png" alt="Storbritanniens Flagga" id="english">
+            </div>
+            
+            <div class="dark-mode-toggle">
+                <span>🌞</span>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span>🌙</span>
+            </div>
+        </div>
+
+        <!-- Header Section -->
+        <header>
+            <div class="header-container">
+                <img src="images/chinesecrested (1).png" alt="Kinesisk Nakenhund Världens Databas" class="header-banner">
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Kennelregister</a></li>
+                <li><a href="#">Kullannonser</a></li>
+            </ul>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <p>Du är här: Hem</p>
+        </div>
+
+        <!-- Tabbed Gallery Section -->
+        <div class="tabbed-gallery">
+            <h4>INFO</h4>
+            <p>CCPedigrees.se är en sida dedikerad till rasen Chinese Crested Dog. Här kan du lära dig mer om rasen i våra artiklar, studera stamtavlor i den största databasen på nätet för rasen, hitta uppfödare i vårt uppfödarregister eller bara njut av alla tusentals bilder på rasen.</p>
+            
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tablinks" onclick="openTab(event, 'Artiklar')" id="defaultOpen">Artiklar</button>
+                <button class="tablinks" onclick="openTab(event, 'Gallery')">Gallery</button>
+                <button class="tablinks" onclick="openTab(event, 'Registry')">Register</button>
+                <button class="tablinks" onclick="openTab(event, 'Directory')">Directory</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="Artiklar" class="tabcontent">
+                <h3>Articels</h3>
+                <p>Här kan du läsa olika artiklar om kinesisk nakenhund.</p>
+            </div>
+
+            <div id="Gallery" class="tabcontent">
+                <h3>Gallery</h3>
+                <div class="gallery-images">
+                    <img src="./images/dog1.jpg" alt="Galleri Bild 1">
+                    <img src="./images/dog2.jpg" alt="Galleri Bild 2">
+                    <img src="./images/dog3.jpg" alt="Galleri Bild 3">
+                </div>
+            </div>
+
+            <div id="Registry" class="tabcontent">
+                <h3>Register</h3>
+                <p>Stamtavlor och registrering av kinesisk nakenhund.</p>
+            </div>
+
+            <div id="Directory" class="tabcontent">
+                <h3>Directory</h3>
+                <p>Här hittar du en uppfödardirectory för kinesisk nakenhund.</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <div class="container">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <section class="about-site">
+                        <h3>OM WEBBPLATSEN</h3>
+                        <p>den senaste informationen från ccpedigrees</p>
+                        <div class="important-notice">
+                            <h4>Viktig information <br><span>07.04.2019</span></h4>
+                            <p>Från och med maj 2019 är det Chinese Crested Club Sverige som äger och driver Chinesecrested.no.</p>
+                            <p>Vår ambition var att säkra alla funktioner, åtgärda alla fel och självklart förbättra allt.</p>
+                            <p>Tyvärr visar det sig att det inte är så enkelt. Sidan behöver byggas om helt i modern kod, och det kommer att ta lite tid.</p>
+                            <p>Kontakt: <a href="mailto:pr@ccclub.se">pr@ccclub.se</a></p>
+                            <p>/Styrelsen CCClub.se</p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+                    <section class="latest-events">
+                        <h3>Senaste händelser</h3>
+                        <p class="event-description">
+                            I början av maj utsattes databasen för en hackerattack med utpressningskrav. Vi har återställt till en äldre backup och ökat säkerheten på servern så detta inte ska kunna hända igen.
+                        </p>
+                        <div class="english-translation">
+                            <h3>Latest Events</h3>
+                            <p class="event-description">
+                                In early May, the database was subjected to a hacker attack with extortion demands. We have restored to an older backup and increased the security on the server.
+                            </p>
+                        </div>
+                        <div class="rebuilding-info">
+                            <h3>Vi bygger om och designar en ny modern upplevelse.</h3>
+                            <ul>
+                                <li>- Valpannonser</li>
+                                <li>- Flyttningar</li>
+                                <li>- Nyheter</li>
+                                <li>- Kennelsidor</li>
+                            </ul>
+                            <p>Om du har problem eller idéer, maila till <a href="mailto:support@ccclub.se">support@ccclub.se</a></p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <nav class="footer-nav">
+                <a href="#">Hem</a>
+                <a href="#">Om</a>
+                <a href="#">Hjälp</a>
+                <a href="#">Annonsera</a>
+                <a href="#">Länka till oss</a>
+                <a href="#">Kontakta oss</a>
+            </nav>
+            <p><a href="#">Användarvillkor</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

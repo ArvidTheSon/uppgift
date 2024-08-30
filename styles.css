@@ -1,0 +1,366 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #2b2b2b;
+    color: #2b2b2b;
+}
+
+
+.paper-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.left-links {
+    display: flex;
+    gap: 15px;
+}
+
+.flags {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 0; 
+    margin-right: 90px;
+}
+
+.flags img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s;
+    margin-right: 5px;
+}
+
+.flags img:hover {
+    transform: translateY(-5px);
+}
+
+
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+
+.header-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-banner {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+
+.main-nav {
+    background-color: #f0ebeb;
+    padding: 10px 0;
+    margin-top: -80px;
+    border-radius: 6px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.main-nav ul li a {
+    font-weight: bold;
+    color: #000;
+    margin-left: 10px;
+    font-size: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #2196F3;
+    transform: scale(1.1);
+}
+
+
+.breadcrumb {
+    background-color: #eee;
+    padding: 10px;
+    margin: 10px 0;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-column {
+    flex: 1;
+    max-width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    order: 2; 
+}
+
+.right-column {
+    flex: 2;
+    max-width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    order: 1; 
+}
+
+
+
+.featured-gallery {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.gallery-images img {
+    width: 200px;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.important-notice, .error-report, .translations {
+    margin-bottom: 20px;
+}
+
+.important-notice h4 {
+    color: #e74c3c;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+.latest-events, .rebuilding-info {
+    background-color: #eaf4f4;
+    border: 2px solid #8ab6d6;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.latest-events h3, .rebuilding-info h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.latest-events .event-description, .rebuilding-info ul {
+    margin: 10px 0;
+}
+
+.rebuilding-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.latest-events .event-description a, .rebuilding-info a {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.latest-events .event-description a:hover, .rebuilding-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #2196F3;
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 12px;
+    color: #555;
+}
+
+footer p a {
+    color: #3498db;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Tabs */
+.tabs {
+    border: 1px solid #dddddd7b;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: -2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tabs button {
+    background-color: #e0e0e0;
+    border: 1px solid #c4c4c4bb;
+    outline: none;
+    padding: 16px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 8px 8px 0 0;
+    margin: 0 5px;
+    transform: translateY(10px);
+}
+
+.tabs button:hover {
+    background-color: #c8c8c8;
+    color: #2196F3;
+}
+
+.tabs button.active {
+    background-color: #2196F3;
+    color: white;
+    border-bottom: 2px solid #f9f9f9;
+    transform: translateY(5px);
+}
+
+.tabcontent {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabcontent h3 {
+    margin-top: 0;
+}
+
+.tabcontent.active {
+    display: block;
+}
